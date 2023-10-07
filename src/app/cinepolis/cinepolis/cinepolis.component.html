@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form (ngSubmit)="condicion()" style="background-color: #001099;">
+        <div class="container">
+            <div class="titulo" style="text-align: center">
+                <br>
+                <br>
+                <div>
+                    <img src="https://media4.giphy.com/media/lNM7rzNe96DBurLrkk/giphy.gif?cid=6c09b9522g8rji6ghaqdlmwrrktw7687ilvvex4xofgw2mjp&ep=v1_stickers_related&rid=giphy.gif&ct=s" alt="Logocinepolis">
+                </div>
+                <mat-divider></mat-divider>
+            </div>
+            <div class="entradas" style="text-align: center">
+                <h2 style="color: white;">Entradas</h2>
+                <div>
+                    <mat-form-field class="name">
+                        <label for="nombres">Nombre:</label>
+                        <input matInput type="text" name="nombres" id="nombres" [(ngModel)]="nombre" required>
+                    </mat-form-field>
+                    <br>
+                    <br>
+                    <mat-form-field class="compradors">
+                        <label for="cantComp">No. de Compradores:</label>
+                        <input matInput type="number" name="cantComp" id="cantComp" [(ngModel)]="cantComp" required>
+                    </mat-form-field>
+                    <br>
+                    <br>
+                    <label style="color: white;" for="tarjetas">
+                        <h2>Tarjeta Cineco: </h2>
+                    </label>
+                    <input type="radio" name="tarjetas" [(ngModel)]="tarjetas" id="1" value='1'> Si
+                    <input type="radio" name="tarjetas" [(ngModel)]="tarjetas" id="0" value='0'> No
+                    <br>
+                    <br>
+                    <mat-form-field class="boleto">
+                        <label for="numBol">Cantidad de boletos </label>
+                        <input matInput type="number" name="numBol" id="numBol" [(ngModel)]="numBol" required>
+                    </mat-form-field>
+                </div>
+            </div>
+            <br>
+            <mat-divider></mat-divider>
+            <br>
+            <br>
+            <mat-divider></mat-divider>
+            <div class="accion" style="text-align: center">
+                <h2 style="color: white;">Acciones</h2>
+                <div>
+                    <button mat-raised-button color="primary" (click)="operacion()">Completar</button>
+                    <br>
+                    <br>
+                    <button mat-raised-button (click)="reiniciar()">Nueva compra</button>
+                </div>
+            </div>
+            <br>
+            <mat-divider></mat-divider>
+            <div style="text-align: center;">
+                <h2 style="color: white;">Salidas</h2>
+            </div>
+            <mat-card>
+                <div style="text-align: center">
+                    <h2>Resumen de su compra</h2>
+                    <p>Nombre: {{nombre}}</p>
+                    <p>No. de Boletos: {{numBol}}</p>
+                    <p>Subtotal: {{Subtotal}}</p>
+                    <p>Descuento por boletos: -{{descAdi}}%</p>
+                    <p>Descuento por tarjeta: -{{descTarj}}%</p>
+                    <p>Total: ${{total}}</p>
+                </div>
+            </mat-card>
+
+        </div>
+    </form>
+</body>
+
+</html>

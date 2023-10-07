@@ -1,0 +1,31 @@
+.container{
+    flex: auto;
+
+}
+
+.titulo {
+    font-style: italic;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.mat-mdc-radio-button~.mat-mdc-radio-button {
+    margin-left: 16px;
+}
+
+.name {
+    min-width: 150px;
+    max-width: 500px;
+    width: 50%;
+}
+
+.compradors {
+    min-width: 150px;
+    max-width: 500px;
+    width: 50%;
+}
+
+.boleto {
+    min-width: 150px;
+    max-width: 500px;
+    width: 50%;
+}
